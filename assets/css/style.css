@@ -1,0 +1,171 @@
+body {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('../images/subtle_surface.png');
+}
+body, input, textarea, button {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777;
+}
+img, .portfoliolink {
+    width: 225px;
+}
+h1, h2 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    color: #4aaaa5;
+    margin: 10px 0;
+}
+p {
+    line-height: 2.0em;
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #666;
+    border-top: 5px solid #4aaaa5;
+    padding: 35px 0 5px;
+    flex-shrink: 0;
+    color: #ccc;
+}
+nav {
+    align-self: center;
+}
+a {
+    color: #777;
+    text-decoration: none;
+}
+a:hover {
+    color: #4aaaa5;
+}
+hr {
+    border-style: solid;
+    color: #ccc;
+}
+input, label{
+    display: block;
+}
+input, textarea {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+label {
+    margin-bottom: 3px;
+}
+button {
+    display: block;
+    background-color: #4aaaa5;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    width: 100px;
+}
+button:hover {
+    background-color: #377F7C;
+    cursor: pointer;
+}
+input:focus, textarea:focus {
+    border-color: #4aaaa5;
+    outline: #4aaaa5;
+}
+.top-bar-container, .main-content {
+    width: 98vw;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.top-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+}
+#profile {
+    float: left;
+    margin: 8px;
+    border-radius: 50%;
+    shape-outside: circle();
+}
+.name {
+    background-color: #4aaaa5;
+    color: #fff;
+    padding: 20px;
+}
+.flexfix {
+    flex: 1 0 auto;
+}
+.main-content {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+}
+.portfoliolink {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    background-color: #000;
+}
+.portfoliolink:hover, button:hover {
+    box-shadow: 3px 3px 5px -2px #ccc;
+    transform: scale(1.03)
+}
+.portfoliolink:hover img {
+    opacity: 1;
+}
+.portfoliolink:hover .title {
+    background-color: #4aaaa5;
+}
+.portfoliolink a {
+    display: block;
+    font-size: 0;
+}
+.portfolioimage {
+    opacity: .5;
+}
+.title {
+    position: absolute;
+    background-color: #377F7C;
+    color: #fff;
+    font-size: 1.5rem;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+@media (max-width: 608px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 5px 10px;
+    }
+    .main-content hr {
+        display: none;
+    }
+    .name {
+        padding: 8px;
+        font-size: .6em;
+        margin-right: 2px;
+        max-width: 35%;
+    }
+    form {
+        width: 100%;
+    }
+}
