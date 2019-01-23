@@ -120,9 +120,13 @@ input:focus, textarea:focus {
     position: relative;
     background-color: #000;
 }
+.portfoliolink, .portfoliolink:hover, 
+.portfoliolink:hover img, .portfoliolink:hover title, .portfolioimage {
+    transition-duration: 100ms;
+}
 .portfoliolink:hover, button:hover {
     box-shadow: 3px 3px 5px -2px #ccc;
-    transform: scale(1.03)
+    transform: scale(1.03);
 }
 .portfoliolink:hover img {
     opacity: 1;
