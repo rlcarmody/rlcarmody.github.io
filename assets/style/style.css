@@ -117,5 +117,11 @@ li a.white-text {
         width: 100vw;
         font-size: 1em;
     }
+    .name h1 {
+        font-size: 3rem;
+    }
+    .name h1 + h3 {
+        font-size: 2rem;
+    }
 }
 
