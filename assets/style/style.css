@@ -94,7 +94,7 @@ h1 {
 li a.white-text {
     font-size: 1.5em;
 }
-@media only screen and (max-width : -992px) {
+@media only screen and (max-width : 992px) {
     header, .main, footer, #portfolio, #aboutme {
       padding-left: 0;
     }
