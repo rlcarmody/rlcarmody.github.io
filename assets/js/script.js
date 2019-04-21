@@ -42,6 +42,12 @@ const projects = {
         github: 'https://github.com/rlcarmody/liri-node-app',
         link: 'https://github.com/rlcarmody/liri-node-app',
         description: `<p class="flow-text">A Node CLI application for querying APIs for information about movies, concerts, and songs using OMDB, Bands in Town and Spotify APIs.  The application accepts arguments from the command line and has a fallback using the Inquirer package if the user fails to enter a valid argument</p>`
+    },
+    friendfinder: {
+        title: 'Friend Finder',
+        link: 'https://uo-bootcamp.herokuapp.com/',
+        github: 'https://github.com/rlcarmody/friendfinder',
+        description: `<p class="flow-text">Find your perfect match with this compatibility matching application built on Node and Express`
     }
 
 }
