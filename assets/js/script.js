@@ -48,6 +48,12 @@ const projects = {
         link: 'https://uo-bootcamp.herokuapp.com/',
         github: 'https://github.com/rlcarmody/friendfinder',
         description: `<p class="flow-text">Find your perfect match with this compatibility matching application built on Node and Express`
+    },
+    burgerjoint: {
+        title: 'Burger Joint',
+        link: 'burger.webdevpdx.com',
+        github: 'https://github.com/rlcarmody/burger',
+        description: '<p class="flow-text">Store the burgers you want to eat in a MySQL database and mark them as "devoured." A ToDo app for burgers!</p>'
     }
 
 }
