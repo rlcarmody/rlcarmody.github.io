@@ -30,7 +30,8 @@
         <li><a class="white-text waves-effect" href="#aboutme">About Me <i class="fas fa-user white-text"></i></a></li>
         <li><a class="white-text waves-effect" href="#home">Home <i class="fas fa-home white-text"></i></a></li>
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i
+            class="material-icons white-text">menu</i></a>
     <div class="main" id="home">
         <div class="name">
             <h1>Ryan <span class="green-text">Carmody</span></h1>
@@ -38,20 +39,21 @@
         </div>
     </div>
     <div id="portfolio" class="white-text">
-        <h3 id="activeproject-title">//doSomething</h3>
-        <div class="carousel">
-            <a class="carousel-item" href="#one!" id="friendfinder"><img src="./assets/images/friendfinder.PNG"></a>
-            <a class="carousel-item" href="#two!" id="dosomething"><img src="./assets/images/project1.PNG"></a>
-            <a class="carousel-item" href="#three!" id="rps"><img src="./assets/images/Rockpaperscissors.PNG"></a>
-            <a class="carousel-item" href="#four!" id="gifs"><img src="./assets/images/giftastic.PNG"></a>
-            <a class="carousel-item" href="#five!" id="rpg"><img src="./assets/images/rpg.PNG"></a>
-            <a class="carousel-item" href="#six!" id="trivia"><img src="./assets/images/trivia.PNG"></a>
-            <a class="carousel-item" href="#seven!" id="pokehangman"><img src="./assets/images/wordguess.PNG"></a>
-            <a class="carousel-item" href="#eight!" id="liri"><img src="./assets/images/liri.jpg"></a>
-            <a class="carousel-item" href="#nine!" id="burgerjoint"><img src="./assets/images/burgerjoint.PNG"></a>
+        <h3 id="activeproject-title"></h3>
+        <div class="flex-row">
+            <i class="large material-icons arrows" data-direction="prev">keyboard_arrow_left</i>
+            <div class="carousel carousel-slider">
+                <a class="carousel-item" href="#one!" id="volunteer"><img src="./assets/images/volunteer.png"></a>
+                <a class="carousel-item" href="#two!" id="dosomething"><img src="./assets/images/dosomething.png"></a>
+                <a class="carousel-item" href="#three!" id="burgerjoint"><img src="./assets/images/burger.png"></a>
+                <a class="carousel-item" href="#four!" id="friendfinder"><img
+                        src="./assets/images/friendfinder.PNG"></a>
+                <a class="carousel-item" href="#five!" id="trivia"><img src="./assets/images/trivia.PNG"></a>
+                <div id="activeproject-links"></div>
+            </div>
+            <i class="large material-icons arrows" data-direction="next">keyboard_arrow_right</i>
         </div>
         <div id="activeproject-info">
-            <div id="activeproject-links"></div>
             <div id="activeproject-description"></div>
         </div>
     </div>

@@ -1,73 +1,58 @@
-M.AutoInit();
+/* global M $ document */
 const projects = {
-    dosomething: {
-        title: '//doSomething',
-        link: 'https://webdevpdx.com/red-team-project/',
-        github: 'https://github.com/rlcarmody/red-team-project',
-        description: `<p class="flow-text">This site is a collaboratively built application leveraging Bing's geocoding and map control system, Foursquare's extensive venue data, and OpenWeather map to help users discover new places to go</p>`
-    },
-    rps: {
-        title: 'Rock Paper Scissors',
-        link: 'https://webdevpdx.com/RPS-Multiplayer/',
-        github: 'https://github.com/rlcarmody/RPS-Multiplayer',
-        description: `<p class="flow-text">A multiplayer Rock Paper Scisscors game powered by jQuery and Firebase real-time database</p>`
-    },
-    gifs: {
-        title: 'Oscar Winning Gifs',
-        link: 'https://webdevpdx.com/GifTastic/',
-        github: 'https://github.com/rlcarmody/GifTastic',
-        description: `<p class="flow-text">A Giphy powered site that generates a series of still images related to movies that won an Academy Award for Best Visual Effects.  Clicking the image "plays" the gif and users can choose favorites that will remain in local storage.</p>`
-    },
-    rpg: {
-        title: 'Mini Role Playing Game',
-        link: 'https://webdevpdx.com/GoT-RPG/',
-        github: 'https://github.com/rlcarmody/GoT-RPG',
-        description: `<p class="flow-text">A small project for practicing DOM manipulation using jQuery.  Players choose a fighter and must battle through all remaining characters</p>`
-    },
-    trivia: {
-        title: 'Trivia Game',
-        github: 'https://github.com/rlcarmody/TriviaGame',
-        link: 'https://webdevpdx.com/TriviaGame/',
-        description: `<p class="flow-text">A 10 question trivia game where all questions are dynamically generated and randomized using the Open Trivia Database</p>`
-    },
-    pokehangman: {
-        title: 'Pokehangman',
-        github: 'https://github.com/rlcarmody/Word-Guess-Game',
-        link: 'https://webdevpdx.com/Word-Guess-Game/',
-        description: `<p class="flow-text">A fun little word game where the player guess the Pokemon.  A single onKeyUp listener is used to fire all of the game logic</p>`
-    },
+  dosomething: {
+    title: '//doSomething',
+    link: 'https://webdevpdx.com/red-team-project/',
+    github: 'https://github.com/rlcarmody/red-team-project',
+    description: '<p class="flow-text">This site is a collaboratively built application leveraging Bing\'s geocoding and map control system, Foursquare\'s extensive venue data, and OpenWeather map to help users discover new places to go</p>',
+  },
+  trivia: {
+    title: 'Trivia Game',
+    github: 'https://github.com/rlcarmody/TriviaGame',
+    link: 'https://webdevpdx.com/TriviaGame/',
+    description: '<p class="flow-text">A 10 question trivia game where all questions are dynamically generated and randomized using the Open Trivia Database</p>',
+  },
 
-    liri: {
-        title: 'LIRI Bot',
-        github: 'https://github.com/rlcarmody/liri-node-app',
-        link: 'https://github.com/rlcarmody/liri-node-app',
-        description: `<p class="flow-text">A Node CLI application for querying APIs for information about movies, concerts, and songs using OMDB, Bands in Town and Spotify APIs.  The application accepts arguments from the command line and has a fallback using the Inquirer package if the user fails to enter a valid argument</p>`
+  friendfinder: {
+    title: 'Friend Finder',
+    link: 'https://uo-bootcamp.herokuapp.com/',
+    github: 'https://github.com/rlcarmody/friendfinder',
+    description: '<p class="flow-text">Find your perfect match with this compatibility matching application built on Node and Express',
+  },
+  burgerjoint: {
+    title: 'Burger Joint',
+    link: 'http://burger.webdevpdx.com',
+    github: 'https://github.com/rlcarmody/burger',
+    description: '<p class="flow-text">Store the burgers you want to eat in a MySQL database and mark them as "devoured." A ToDo app for burgers!</p>',
+  },
+  volunteer: {
+    title: 'Volunteer Coordinator',
+    link: 'https://secret-hamlet-38148.herokuapp.com/',
+    github: 'https://github.com/rlcarmody/Volunteer-Coordinator-Project2',
+    description: '<p class="flow-text">Online volunteer coordination system. The administrator creates the events and defines different positions.  A user can register an event and sign up for a position.  The staff then know who to expect and when</p>',
+  },
+};
+
+$(document).ready(() => {
+  const elems = document.querySelectorAll('.carousel');
+  const carouselInstance = M.Carousel.init(elems, {
+    onCycleTo: () => {
+      const id = document.querySelector('.active').attributes.id.value;
+      $('#activeproject-description').html(projects[id].description);
+      $('#activeproject-title').text(projects[id].title);
+      $('#activeproject-links').html(`<a class="white-text" href="${projects[id].link}" target="_blank">View App <i class="fas fa-external-link-alt"></i></a><a href="${projects[id].github}" class="white-text" target="_blank">View Source Code <i
+        class="fab fa-github"></i></a>`);
     },
-    friendfinder: {
-        title: 'Friend Finder',
-        link: 'https://uo-bootcamp.herokuapp.com/',
-        github: 'https://github.com/rlcarmody/friendfinder',
-        description: `<p class="flow-text">Find your perfect match with this compatibility matching application built on Node and Express`
-    },
-    burgerjoint: {
-        title: 'Burger Joint',
-        link: 'burger.webdevpdx.com',
-        github: 'https://github.com/rlcarmody/burger',
-        description: '<p class="flow-text">Store the burgers you want to eat in a MySQL database and mark them as "devoured." A ToDo app for burgers!</p>'
-    }
+    fullWidth: true,
+    indicators: true,
+  });
+  const navElem = document.querySelectorAll('.sidenav');
+  navInstance = M.Sidenav.init(navElem, {
+    draggable: true,
+  });
 
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    let elems = document.querySelectorAll('.carousel');
-    let instances = M.Carousel.init(elems, {
-        padding: 50, dist: -50, onCycleTo: function () {
-            let id = document.querySelector('.active').attributes.id.value;
-            $('#activeproject-description').html(projects[id].description);
-            $('#activeproject-title').text(projects[id].title);
-            $('#activeproject-links').html(`<a class="white-text" href="${projects[id].link}" target="_blank">View App <i class="fas fa-external-link-alt"></i></a><a href="${projects[id].github}" class="white-text" target="_blank">View Source Code <i
-        class="fab fa-github"></i></a>`)
-        }
-    })
-})
-
+  $('.arrows').on('click', (event) => {
+    const direction = event.target.getAttribute('data-direction');
+    $('.carousel').carousel(direction);
+  });
+});
