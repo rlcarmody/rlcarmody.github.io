@@ -31,6 +31,12 @@ const projects = {
     github: 'https://github.com/rlcarmody/Volunteer-Coordinator-Project2',
     description: '<p class="flow-text">Online volunteer coordination system. The administrator creates the events and defines different positions.  A user can register an event and sign up for a position.  The staff then know who to expect and when</p>',
   },
+  techscraper: {
+    title: 'TechScraper',
+    link: 'https://techscraper-rc.herokuapp.com/',
+    github: 'https://github.com/rlcarmody/scraper',
+    description: '<p class="flow-text">Gathers articles from AnandTech and stores them in a Mongo database.  Visitors of the site can leave comments and follow the path to the original article.</p>'
+  }
 };
 
 $(document).ready(() => {
