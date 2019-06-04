@@ -1,4 +1,3 @@
-/* global M $ document */
 const projects = {
   dosomething: {
     title: '//doSomething',
@@ -36,6 +35,12 @@ const projects = {
     link: 'https://techscraper-rc.herokuapp.com/',
     github: 'https://github.com/rlcarmody/scraper',
     description: '<p class="flow-text">Gathers articles from AnandTech and stores them in a Mongo database.  Visitors of the site can leave comments and follow the path to the original article.</p>'
+  },
+  clickgame: {
+    title: 'Clicky Game',
+    link: 'https://clickygame.webdevpdx.com/',
+    github: 'https://github.com/rlcarmody/clicky-game',
+    description: '<p class="flow-text">A React based memory game. Click each picture only once to accrue points</p>'
   }
 };
 
