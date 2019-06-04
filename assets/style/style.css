@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo');
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.7)),
-    url('../images/hero.jpg')
-    ;
+    background-image: url('../images/hero.jpg');
+    background-color: #222;
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    background-color: rgba(255,255,255,.7);
     font-family: 'Nanum Myeongjo', serif;
 }
 .sidenav-trigger {
@@ -26,7 +25,15 @@ h1::after {
     border-radius: 60%;
     top: -5px;
     box-shadow: 0px 0px 5px 2px rgba(255,255,255,.7);
+    transform: scaleX(0);
+    animation: underscore 1.5s ease-in-out forwards 2s;
   }
+
+  @keyframes underscore {
+    0% {transform: scaleX(0);}
+    100% {transform: scalex(1);}
+  }
+
 header, .main, footer, #portfolio, #aboutme {
     padding-left: 300px;
   }
@@ -50,6 +57,12 @@ h1 {
     margin-top: 0;
     padding-top: 0;
     font-weight: 800;
+    color: transparent;
+    animation: subtitle 1s ease-in forwards 3.5s;
+}
+
+@keyframes subtitle {
+    100% {color: #fff;}
 }
 .name{
     color: #fff;
@@ -59,6 +72,27 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+
+#firstname {
+    display: inline-block;
+    transform: translateX(-100vw);
+    animation: firstname 2s ease-out forwards;
+}
+
+@keyframes firstname {
+    100% {transform: translateX(0);}
+}
+
+#lastname {
+    display: inline-block;
+    transform: translatey(-100vh);
+    animation: lastname 1s ease-out forwards 1s;
+}
+
+@keyframes lastname {
+    100% {transform: translatey(0);}
+}
+
 #portfolio {
     color: #fff;
     width: 100%;
