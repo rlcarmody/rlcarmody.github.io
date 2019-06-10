@@ -41,6 +41,12 @@ const projects = {
     link: 'https://clickygame.webdevpdx.com/',
     github: 'https://github.com/rlcarmody/clicky-game',
     description: '<p class="flow-text">A React based memory game. Click each picture only once to accrue points</p>'
+  },
+  googlebooks: {
+    title: 'Google Books Search',
+    link: 'https://rc-googlebooks.herokuapp.com/',
+    github: 'https://github.com/rlcarmody/google-books-search',
+    description: '<p class="flow-text">A full stack MERN application using Google Books API to search for books and them to a list</p>'
   }
 };
 

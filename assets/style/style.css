@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo');
 
 body {
-    background-image: url('../images/hero.jpg');
+    background-image: url('../images/hero.webp');
     background-color: #222;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
