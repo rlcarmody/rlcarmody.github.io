@@ -1,0 +1,71 @@
+h1::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255,255,255,.7);
+  position: relative;
+  display: block;
+  border-radius: 60%;
+  top: -5px;
+  box-shadow: 0px 0px 5px 2px rgba(255,255,255,.7);
+  transform: scaleX(0);
+  animation: underscore 1.5s ease-in-out forwards 2s;
+}
+
+@keyframes underscore {
+  0% {transform: scaleX(0);}
+  100% {transform: scalex(1);}
+}
+
+.subtitle {
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 800;
+  color: transparent;
+  animation: subtitle 1s ease-in forwards 3.5s;
+}
+
+@keyframes subtitle {
+  100% {color: #fff;}
+}
+.name{
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  padding: 2rem 0;
+}
+
+#firstname {
+  display: inline-block;
+  transform: translateX(-100vw);
+  animation: firstname 2s ease-out forwards;
+}
+
+@keyframes firstname {
+  100% {transform: translateX(0);}
+}
+
+#lastname {
+  display: inline-block;
+  transform: translatey(-100vh);
+  animation: lastname 1s ease-out forwards 1s;
+}
+
+@keyframes lastname {
+  100% {transform: translatey(0);}
+}
+
+.name h1 {
+  font-size: 3rem;
+}
+.name h1 + h3 {
+  font-size: 2rem;
+}
+
+.green-text {
+  color: rgb(130, 197, 13);
+}
