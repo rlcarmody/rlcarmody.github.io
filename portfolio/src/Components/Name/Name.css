@@ -2,12 +2,12 @@ h1::after {
   content: '';
   width: 100%;
   height: 2px;
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(130,197,13,.7);
   position: relative;
   display: block;
   border-radius: 60%;
   top: -5px;
-  box-shadow: 0px 0px 5px 2px rgba(255,255,255,.7);
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,.2);
   transform: scaleX(0);
   animation: underscore 1.5s ease-in-out forwards 2s;
 }
@@ -21,12 +21,12 @@ h1::after {
   margin-top: 0;
   padding-top: 0;
   font-weight: 800;
-  color: transparent;
-  animation: subtitle 1s ease-in forwards 3.5s;
+  opacity: 0;
+  animation: subtitle .75s ease-in forwards 3.5s;
 }
 
 @keyframes subtitle {
-  100% {color: #fff;}
+  100% {opacity: 100;}
 }
 .name{
   color: #fff;
@@ -35,8 +35,8 @@ h1::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0,0,0,.5);
   padding: 2rem 0;
+  text-shadow:1px 1px 2px#222;
 }
 
 #firstname {
@@ -51,21 +51,31 @@ h1::after {
 
 #lastname {
   display: inline-block;
-  transform: translatey(-100vh);
-  animation: lastname 1s ease-out forwards 1s;
+  transform: translatex(100vw);
+  animation: lastname 2s ease-out forwards;
 }
 
 @keyframes lastname {
-  100% {transform: translatey(0);}
+  100% {transform: translatex(0);}
 }
 
 .name h1 {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .name h1 + h3 {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .green-text {
   color: rgb(130, 197, 13);
+}
+
+
+@media screen and (max-width: 640px) {
+  .name h1 {
+    font-size: 3rem;
+  }
+  .name h1 + h3 {
+    font-size: 2rem;
+  }
 }
